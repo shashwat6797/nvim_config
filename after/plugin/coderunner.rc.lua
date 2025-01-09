@@ -11,7 +11,7 @@ require("code_runner").setup({
 		python = "python3 $fileName ",
 		typescript = "deno run",
 		rust = "cd $dir && rustc $fileName && $dir/$fileNameWithoutExt",
-		cpp = "g++ $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
+		cpp = "g++ $fileName -o builds/$fileNameWithoutExt && builds/$fileNameWithoutExt",
 		c = "gcc $fileName -o $fileNameWithoutExt && ./$fileNameWithoutExt",
 		cs = "dotnet run",
 	},

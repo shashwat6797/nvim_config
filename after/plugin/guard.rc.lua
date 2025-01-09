@@ -1,9 +1,6 @@
 local ft = require("guard.filetype")
 
-local status2, guard = pcall(require, "guard")
-if not status2 then
-	return
-end
+ft("rust"):fmt("rustfmt")
 
 ft("cpp"):fmt("clang-format")
 
@@ -11,7 +8,7 @@ ft("lua"):fmt("stylua")
 
 ft(
 	"css",
-	"graphql",
+	"gfaphql",
 	"html",
 	"javascript",
 	"typescript",
@@ -29,11 +26,11 @@ ft("typescriptreact"):fmt("prettier")
 
 ft("javascript"):fmt("lsp"):append("prettier")
 
-guard.setup({
+vim.g.guard_config = {
 	-- the only options for the setup function
 	fmt_on_save = true,
 	-- Use lsp if no formatter was defined for this filetype
 	lsp_as_default_formatter = false,
-})
+}
 
-vim.keymap.set("n", "<Leader>ft", "<cmd>GuardFmt<cr>")
+vim.keymap.set("n", "<Leader>F", "<cmd>Guard fmt<cr>")

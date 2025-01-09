@@ -24,6 +24,7 @@ packer.startup(function(use)
 			"MunifTanjim/nui.nvim",
 		},
 	})
+	use("terrortylor/nvim-comment")
 	use("neovim/nvim-lspconfig")
 
 	--tmux navigation
@@ -83,8 +84,18 @@ packer.startup(function(use)
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
-
 	--colorscheme
+	use("lukas-reineke/indent-blankline.nvim")
+	use("AstroNvim/astrotheme")
+	use({
+		"philosofonusus/morta.nvim",
+		name = "morta",
+		priority = 1000,
+		opts = {},
+		config = function()
+			vim.cmd.colorscheme("morta")
+		end,
+	})
 	use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
 	use({ "bluz71/vim-nightfly-colors", as = "nightfly" })
 	use("jiangmiao/auto-pairs")
@@ -98,7 +109,7 @@ packer.startup(function(use)
 	use("mattn/emmet-vim")
 	use("mfussenegger/nvim-jdtls")
 	use("williamboman/mason.nvim")
-	use("neoclide/coc.nvim")
+	--use("neoclide/coc.nvim")
 	-- These optional plugins should be loaded directly because of a bug in Packer lazy loading
 	use("nvim-tree/nvim-web-devicons") -- OPTIONAL: for file icons
 	use("lewis6991/gitsigns.nvim") -- OPTIONAL: for git status
@@ -111,11 +122,10 @@ packer.startup(function(use)
 		},
 	})
 	use("xiyaowong/transparent.nvim")
-	use("Yggdroot/indentLine")
 	use("kabouzeid/nvim-lspinstall")
 	use({ "nvim-treesitter/nvim-treesitter" })
 	use("Shougo/ddc.vim")
 
-	use("vim-denops/denops.vim")
-	use("vim-denops/denops-helloworld.vim")
+	--use("vim-denops/denops.vim")
+	--use("vim-denops/denops-helloworld.vim")
 end)

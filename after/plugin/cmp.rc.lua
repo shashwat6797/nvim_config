@@ -33,6 +33,31 @@ ls.add_snippets("cpp", {
 			}),
 		}, ""),
 	}),
+	s("cp", {
+		isn(1, {
+			t({
+				"#include<bits/stdc++.h>",
+				"",
+				"#define ll long long",
+				"#define vi vector<int>",
+				"#define vl vector<ll>",
+				"#define vs vector<string>",
+				"#define vd vector<double>",
+				"",
+				"using namespace std;",
+				"",
+				"void solve() {};",
+				"",
+				"int main(){",
+				"int T;",
+				"cin>>T;",
+				"while(T--) {",
+				"}",
+				"return 0;",
+				"}",
+			}),
+		}, ""),
+	}),
 })
 
 cmp.setup({

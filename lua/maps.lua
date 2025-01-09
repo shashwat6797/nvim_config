@@ -37,6 +37,9 @@ keymap.set("n", "<C-w><up>", "<C-w>+")
 keymap.set("n", "<C-w><down>", "<C-w>-")
 keymap.set("", "<C-e>", "<esc>")
 
+--Rustformat
+keymap.set("n", "<Leader>f", "<cmd>RustFmt<cr>")
+
 --Toggle Neotree
 keymap.set("n", "<Leader>e", "<cmd>Neotree toggle<cr>")
 

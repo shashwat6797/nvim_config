@@ -60,7 +60,7 @@ require("lspconfig").html.setup({
 	capabilities = capabilities,
 })
 
-require("lspconfig").tsserver.setup({
+require("lspconfig").ts_ls.setup({
 	filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescript", "typescriptreact", "typescript.tsx" },
 	capabilities = capabilities,
 })
