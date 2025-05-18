@@ -43,6 +43,7 @@ packer.startup(function(use)
 	})
 	use("nvimtools/none-ls-extras.nvim")
 	use("MunifTanjim/prettier.nvim")
+	use("prabirshrestha/vim-lsp")
 
 	--gaurd formatter
 	use({
@@ -50,6 +51,14 @@ packer.startup(function(use)
 	})
 	use({
 		"nvimdev/guard-collection",
+	})
+
+	--formatter
+	use({
+		"stevearc/conform.nvim",
+		config = function()
+			require("conform").setup()
+		end,
 	})
 
 	--completion extensions

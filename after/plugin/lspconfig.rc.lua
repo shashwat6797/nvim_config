@@ -52,8 +52,15 @@ nvim_lsp.pyright.setup({ capabilities = capabilities })
 nvim_lsp.clangd.setup({ capabilities = capabilities })
 nvim_lsp.lua_ls.setup({ capabilities = capabilities })
 nvim_lsp.jdtls.setup({ capabilities = capabilities })
+nvim_lsp.intelephense.setup({ settings = {
+	intelephense = { files = { maxSize = 5000000 } },
+} })
 
 require("mason").setup({})
+
+nvim_lsp.volar.setup({
+	filetypes = { "vue" },
+})
 
 require("lspconfig").html.setup({
 	cmd = { "html-languageserver", "--stdio" },
